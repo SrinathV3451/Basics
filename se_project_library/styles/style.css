@@ -2,7 +2,7 @@
   max-width: 1600px;
   min-width: 1300px;
   margin: auto;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
 }
@@ -35,8 +35,8 @@
   font-weight: 500;
   color: #000000;
   max-width: 601px;
-  top: 0;
-  bottom: 0;
+  margin-top: 128px;
+  margin-bottom: 32px;
 }
 
 .header__description {
@@ -46,8 +46,8 @@
   color: #000000;
   max-width: 532px;
   font-size: 20px;
-  top: 0;
-  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*
@@ -63,8 +63,7 @@
 
 .header__address {
   color: #838383;
-  top: 0;
-  bottom: 0;
+  margin: 0;
 }
 
 .header__footer {
@@ -111,11 +110,6 @@
   color: #d35722;
 }
 
-.header__title {
-  margin-top: 128px;
-  margin-bottom: 32px;
-}
-
 .events {
   padding: 100px 0 120px 80px;
   display: flex;
@@ -137,7 +131,7 @@
 }
 
 .events__title {
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 500;
   line-height: 52px;
   margin: 32px 0 0;
@@ -212,7 +206,7 @@
 
 .person_name_feynman {
   /* Use correct values of top/right/bottom/left properties to position the element */
-  top: 30px;
+  top: -30px;
   left: 319px;
 }
 
@@ -292,14 +286,15 @@
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
 .staff__cards {
   max-width: 760px;
-  margin-top: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 68px;
   padding: 0;
+  list-style-type: none;
 }
 
 .card {
@@ -309,16 +304,6 @@
   box-sizing: border-box;
   height: 420px;
   width: 360px;
-}
-
-.grid-container {
-  display: grid;
-  list-style-type: none; /* Remove default list styling */
-  padding: 30px 300px; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  grid-template-columns: repeat(2, 1fr);
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .card__content {
@@ -373,11 +358,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 40px;
 }
 
 .step {
-  width: 220px;
+  flex-basis: 220px;
 }
 
 .step__title {
@@ -407,8 +392,7 @@
   display: flex;
 }
 .about__paragraph {
-  margin-bottom: static;
-  top: static;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 .about__title {
@@ -424,8 +408,6 @@
   font-weight: 400;
   max-width: 660px;
   display: grid;
-  justify-content: auto;
-  align-items: auto;
   margin-left: auto;
 }
 
@@ -438,33 +420,20 @@
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: auto;
+  padding: 60px 80px;
+  background-color: #1f1f1f;
 }
 
 .footer__columns {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px;
-  background-color: #1f1f1f;
   width: 100%;
-}
-
-.footer_column {
-  margin: 0 0 0 10px;
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__column_content_hours {
   color: #f2f2f2;
   margin-left: auto;
-  padding: 80px 60px;
-  margin-top: -60px;
-  margin-bottom: -60px;
 }
 
 .footer__column_content_social {
@@ -472,16 +441,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 80px 60px;
-  margin-top: -60px;
-  margin-bottom: -60px;
+  margin-left: 80px;
 }
 
 .footer__logo {
   max-width: 100%;
   width: 57px;
-  padding: 40px 60px; /* Adjusted padding to account for the removal of negative margins */
-  margin-left: 30px;
 }
 
 .footer__list {
@@ -493,6 +458,10 @@
 
 .footer__list-item {
   margin-bottom: 16px;
+}
+
+.footer__list-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer__column-heading {
@@ -527,8 +496,6 @@
   color: white;
   margin-top: 108px;
   font-size: 16px;
-  text-align: center;
   width: auto;
   margin-bottom: 0;
-  margin-left: 80px;
 }
